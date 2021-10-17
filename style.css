@@ -27,6 +27,7 @@ main {
 /* title */
 
 .title-section {
+  background-color: var(--clr-tetriary);
   background-image: url("media/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg");
   background-size: 100%;
   color: var(--clr-primary);
@@ -58,6 +59,7 @@ main {
 /* about */
 
 .about-section {
+  background-color: var(--clr-primary);
   background-image: url(media/oleksii-drozdov-pwzI7eQBipc-unsplash.jpg);
   background-size: 100%;
   color: var(--clr-secondary);
