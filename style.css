@@ -1,13 +1,17 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   --clr-primary: #353a3a;
   --clr-secondary: #ffffff;
   --clr-tetriary: rgba(53, 58, 58, 0.1);
+
+  --fs-xxl: clamp(3rem, 8vw, 5rem);
+  --fs-xl: clamp(2.5rem, 6vw, 4rem);
+  --fs-large: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -17,21 +21,47 @@ body {
 
 main {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
 }
 
 /* title */
 
 .title-section {
+  background-image: url("media/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg");
+  background-size: 100%;
+  color: var(--clr-primary);
   display: grid;
+  grid-template-rows: 2fr 5fr;
+  justify-content: center;
+  justify-items: center;
+  padding-block: 15vw;
+}
+
+.title-header {
+  display: flex;
+  align-items: flex-end;
+  margin: 10px;
+}
+
+.title-header h4 {
+  font-size: var(--fs-large);
+  font-weight: lighter;
+}
+
+.title-main h1 {
+  font-size: var(--fs-xxl);
+  padding: 10px;
+  border-top: 2px solid var(--clr-primary);
+  border-bottom: 2px solid var(--clr-primary);
 }
 
 /* about */
 
 .about-section {
-  background-image: url("media/double-bubble-dark.png");
+  background-image: url(media/oleksii-drozdov-pwzI7eQBipc-unsplash.jpg);
+  background-size: 100%;
   color: var(--clr-secondary);
-  font-size: 40px;
+  font-size: var(--fs-xl);
   display: grid;
   align-items: center;
   justify-items: center;
@@ -46,18 +76,50 @@ main {
 .about-content {
   background-color: var(--clr-primary);
   margin: 0;
-  padding: 50px 30px;
+  padding: min(10vh, 10rem) 30px;
+}
+
+.about-img {
+  background-image: url(media/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg);
 }
 
 /* portfolio */
 
 .portfolio-section {
   background-color: var(--clr-tetriary);
+  color: var(--clr-primary);
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  gap: 20px;
+  justify-content: center;
+  justify-items: center;
+  padding-block: 10vh;
+  font-size: var(--fs-large);
+  font-weight: bold;
+}
+
+.portfolio-content {
   display: grid;
   justify-content: center;
-  padding: 50px 0;
-  font-size: 40px;
-  font-weight: bold;
+  padding-block: 3vh;
+}
+
+.portfolio-item {
+  background-color: var(--clr-secondary);
+  width: clamp(25rem, 25vw + 10rem, 40rem);
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.1);
+}
+
+.portfolio-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }
 
 /* contact */
@@ -83,4 +145,8 @@ main {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+}
+
+.contact-icon:hover {
+  transform: scale(1.05);
 }
